@@ -964,7 +964,448 @@ main{max-width:1500px;margin:auto;padding:0 28px}.store-head{padding:28px 0 18px
 .apps-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px}.app-card{position:relative;display:block;min-width:0;padding:13px;border-radius:17px;background:var(--surface);border:1px solid var(--line);transition:.22s;overflow:hidden}.app-card:hover{transform:translateY(-4px);background:#171c27;border-color:rgba(139,108,255,.38);box-shadow:0 16px 30px rgba(0,0,0,.22)}.app-icon{display:block;width:70px;height:70px;object-fit:cover;border-radius:17px;margin-bottom:11px;background:#202633}.verified{position:absolute;top:10px;right:10px;width:21px;height:21px;display:grid;place-items:center;border-radius:50%;background:var(--green);color:#07120c;font-size:9px}.app-name{font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.app-developer{font-size:10px;color:var(--muted);margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.app-meta{display:flex;gap:8px;align-items:center;margin-top:9px;font-size:10px;color:var(--muted)}.rating{color:#ffd46b}.rating i{margin-right:3px}.downloads{padding-left:8px;border-left:1px solid var(--line)}.loading-state,.empty-state{grid-column:1/-1;min-height:180px;display:grid;place-items:center;text-align:center;color:var(--muted);gap:8px}.empty-state h3{color:#fff}
 .info-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.info-card{padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}.info-card i{font-size:20px;color:var(--brand);margin-bottom:13px}.info-card h3{font-size:14px;margin-bottom:7px}.info-card p{font-size:11px;color:var(--muted);line-height:1.65}
 footer{border-top:1px solid var(--line);margin-top:15px}.footer-inner{max-width:1500px;margin:auto;padding:30px 28px}.footer-grid{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:35px}.footer-brand p{font-size:11px;color:var(--muted);line-height:1.7;max-width:370px;margin-top:13px}.footer-column h4{font-size:12px;margin-bottom:12px}.footer-column a{display:block;color:var(--muted);font-size:11px;margin:8px 0}.copyright{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:20px;margin-top:25px;font-size:10px;color:#697384}.developer-credit{border:0;text-align:center;padding:5px;color:#687284;font-size:10px}.developer-credit strong{color:#a99aff}
-@media(max-width:1150px){.apps-grid{grid-template-columns:repeat(5,1fr)}.feature-row{grid-template-columns:1.2fr .8fr}}@media(max-width:850px){.nav{padding:0 16px;gap:12px}.nav-links{display:none}.mobile-menu{display:grid;place-items:center;width:40px;height:40px;background:transparent;border:1px solid var(--line);border-radius:11px;color:#fff}.nav-links.mobile-open{display:flex;position:absolute;top:72px;left:0;right:0;background:#10141d;padding:12px 16px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}.nav-links.mobile-open a{width:100%}.apps-grid{grid-template-columns:repeat(4,1fr)}.feature-row{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.header{height:64px}.logo{font-size:16px}.logo-icon{width:34px;height:34px}.nav-search{width:42px;padding:0;justify-content:center}.nav-search input{display:none}.nav-search:focus-within{width:190px;padding:0 12px;justify-content:flex-start}.nav-search:focus-within input{display:block}main{padding:0 15px}.store-head{padding:20px 0 12px}.store-title{font-size:24px}.store-sub{font-size:11px}.get-app{display:none}.feature-main,.feature-side{min-height:160px;padding:21px}.feature-main h2{font-size:24px}.apps-grid{grid-template-columns:repeat(3,1fr);gap:9px}.app-card{padding:10px;border-radius:14px}.app-icon{width:56px;height:56px;border-radius:14px}.app-name{font-size:11px}.app-developer,.app-meta{font-size:9px}.verified{transform:scale(.85);transform-origin:top right}.info-row{grid-template-columns:1fr}.footer-inner{padding:26px 15px}.footer-grid{grid-template-columns:1fr 1fr;gap:24px}.footer-brand{grid-column:1/-1}.store-title-row{align-items:start}}
+/* =====================================================
+   RESPONSIVE — TABLET
+===================================================== */
+
+@media (max-width: 1150px){
+
+    .apps-grid{
+        grid-template-columns:repeat(5,minmax(0,1fr));
+    }
+
+    .feature-row{
+        grid-template-columns:1.2fr .8fr;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE — SMALL TABLET
+===================================================== */
+
+@media (max-width: 850px){
+
+    .header{
+        height:68px;
+    }
+
+    .nav{
+        padding:0 18px;
+        gap:12px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .mobile-menu{
+        display:grid;
+        place-items:center;
+        width:42px;
+        height:42px;
+        flex:none;
+        background:#171c27;
+        border:1px solid var(--line);
+        border-radius:12px;
+        color:#fff;
+        cursor:pointer;
+    }
+
+    .nav-links.mobile-open{
+        display:flex;
+        position:absolute;
+        top:68px;
+        left:0;
+        right:0;
+
+        background:#10141d;
+        border-bottom:1px solid var(--line);
+
+        padding:14px 18px;
+
+        flex-direction:column;
+        align-items:stretch;
+
+        z-index:999;
+    }
+
+    .nav-links.mobile-open a{
+        width:100%;
+        padding:13px 14px;
+    }
+
+    .search-wrapper{
+        margin-left:auto;
+    }
+
+    .apps-grid{
+        grid-template-columns:repeat(4,minmax(0,1fr));
+    }
+
+    .feature-row{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE — MOBILE
+   IMPORTANT: NOTHING IMPORTANT IS HIDDEN
+===================================================== */
+
+@media (max-width:600px){
+
+    /* HEADER */
+
+    .header{
+        height:auto;
+        min-height:64px;
+    }
+
+    .nav{
+        min-height:64px;
+        height:auto;
+
+        padding:10px 14px;
+
+        display:grid;
+
+        grid-template-columns:auto 1fr auto;
+
+        gap:10px;
+    }
+
+
+    /* LOGO */
+
+    .logo{
+        font-size:15px;
+        gap:7px;
+    }
+
+    .logo-icon{
+        width:34px;
+        height:34px;
+        border-radius:10px;
+    }
+
+
+    /* SEARCH — ALWAYS VISIBLE */
+
+    .search-wrapper{
+        width:100%;
+        margin:0;
+    }
+
+    .nav-search{
+        width:100%;
+        height:42px;
+
+        padding:0 12px;
+
+        justify-content:flex-start;
+
+        border-radius:12px;
+    }
+
+    .nav-search input{
+        display:block;
+
+        min-width:0;
+
+        font-size:12px;
+    }
+
+
+    /* MENU */
+
+    .mobile-menu{
+        width:40px;
+        height:40px;
+        border-radius:11px;
+    }
+
+
+    /* MOBILE MENU POSITION */
+
+    .nav-links.mobile-open{
+        top:64px;
+    }
+
+
+    /* MAIN */
+
+    main{
+        padding:0 14px;
+    }
+
+
+    /* STORE HEADER */
+
+    .store-head{
+        padding:22px 0 14px;
+    }
+
+    .store-title-row{
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .eyebrow{
+        font-size:9px;
+        margin-bottom:7px;
+    }
+
+    .store-title{
+        font-size:25px;
+        line-height:1.1;
+    }
+
+    .store-sub{
+        font-size:11px;
+        line-height:1.5;
+    }
+
+
+    /* GET APP BUTTON — KEEP VISIBLE */
+
+    .get-app{
+        display:inline-flex;
+
+        align-items:center;
+        justify-content:center;
+
+        padding:9px 10px;
+
+        font-size:10px;
+
+        border-radius:10px;
+
+        flex:none;
+    }
+
+
+    /* CATEGORIES */
+
+    .category-strip{
+        gap:8px;
+        padding:8px 0 18px;
+    }
+
+    .category{
+        padding:8px 13px;
+        font-size:11px;
+    }
+
+
+    /* FEATURES */
+
+    .feature-row{
+        gap:12px;
+        margin-bottom:25px;
+    }
+
+    .feature-main,
+    .feature-side{
+        min-height:165px;
+        padding:20px;
+        border-radius:18px;
+    }
+
+    .feature-main h2{
+        font-size:24px;
+    }
+
+    .feature-side h3{
+        font-size:19px;
+    }
+
+
+    /* APPS — EXACTLY 3 PER ROW */
+
+    .apps-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+
+        gap:9px;
+    }
+
+
+    /* APP CARDS */
+
+    .app-card{
+        padding:9px;
+        border-radius:14px;
+    }
+
+    .app-icon{
+        width:100%;
+        aspect-ratio:1;
+
+        height:auto;
+
+        max-width:62px;
+
+        border-radius:14px;
+
+        margin-bottom:9px;
+    }
+
+    .app-name{
+        font-size:11px;
+    }
+
+    .app-developer{
+        font-size:9px;
+        margin-top:4px;
+    }
+
+    .app-meta{
+        font-size:9px;
+        gap:5px;
+        margin-top:7px;
+    }
+
+    .downloads{
+        padding-left:5px;
+    }
+
+    .verified{
+        width:19px;
+        height:19px;
+        font-size:8px;
+
+        top:7px;
+        right:7px;
+    }
+
+
+    /* SECTION */
+
+    .section{
+        padding:7px 0 28px;
+    }
+
+    .section-header{
+        margin-bottom:14px;
+    }
+
+    .section-title h2{
+        font-size:19px;
+    }
+
+    .section-title p{
+        font-size:10px;
+    }
+
+
+    /* INFO CARDS */
+
+    .info-row{
+        grid-template-columns:1fr;
+        gap:11px;
+    }
+
+    .info-card{
+        padding:17px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-inner{
+        padding:26px 14px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+        gap:24px 18px;
+    }
+
+    .footer-brand{
+        grid-column:1/-1;
+    }
+
+    .copyright{
+        flex-direction:column;
+        gap:7px;
+
+        font-size:9px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width:360px){
+
+    .nav{
+        padding:9px 10px;
+        gap:7px;
+    }
+
+    .logo{
+        font-size:13px;
+    }
+
+    .logo-icon{
+        width:30px;
+        height:30px;
+    }
+
+    .nav-search{
+        height:39px;
+    }
+
+    .nav-search input{
+        font-size:10px;
+    }
+
+    .mobile-menu{
+        width:38px;
+        height:38px;
+    }
+
+    main{
+        padding:0 10px;
+    }
+
+    .store-title{
+        font-size:22px;
+    }
+
+    .get-app{
+        padding:8px;
+        font-size:9px;
+    }
+
+    .apps-grid{
+        gap:7px;
+    }
+
+    .app-card{
+        padding:7px;
+    }
+
+    .app-name{
+        font-size:10px;
+    }
+
+    .app-developer,
+    .app-meta{
+        font-size:8px;
+    }
+
+}
     </style>
 
 <body>
